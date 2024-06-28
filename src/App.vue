@@ -8,8 +8,20 @@
       @transactionDeleted="handleTransactionDeleted"
     />
     <AddTransaction @transactionSubmited="handleTransactionSubmited" />
+    <p class="cpywrite">
+      Developed by ©
+      <a href="https://www.linkedin.com/in/prabhakar-kumar-040644214/">
+        Prabhakar kumar</a
+      >
+    </p>
   </div>
 </template>
+<style scoped>
+.cpywrite {
+  text-align: center;
+  font-size: 10px;
+}
+</style>
 
 <script setup>
 import Header from "./components/Header.vue";
