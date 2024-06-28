@@ -6,12 +6,14 @@
     </div>
     <div>
       <h4>Expense</h4>
-      <p id="money-minus" class="money minus">-₹ {{ expense }}</p>
+      <p id="money-minus" class="money minus">-₹ {{ Math.abs(expense) }}</p>
     </div>
   </div>
 </template>
+
 <script setup>
 import { defineProps } from "vue";
+
 const props = defineProps({
   income: {
     type: Number,
@@ -23,3 +25,18 @@ const props = defineProps({
   },
 });
 </script>
+
+<style scoped>
+.money {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.money.plus {
+  color: green;
+}
+
+.money.minus {
+  color: red;
+}
+</style>

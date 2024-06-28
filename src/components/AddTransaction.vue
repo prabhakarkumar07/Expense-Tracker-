@@ -55,6 +55,11 @@ const onSubmit = () => {
     return;
   }
 
+  if (text.value.length > 75) {
+    toast.error("Name of Transaction must not exceed 75 characters");
+    return;
+  }
+
   const parsedAmount = parseFloat(amount.value);
   if (isNaN(parsedAmount)) {
     toast.error("Amount must be a number");
